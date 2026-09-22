@@ -1,0 +1,68 @@
+.section-accordion {
+  background: #fff;
+  color: var(--brand-text);
+  border-bottom: 1px solid var(--brand-line);
+  scroll-margin-top: 104px;
+}
+.section-accordion > summary {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 32px;
+  width: min(1240px, calc(100% - clamp(48px, 8vw, 128px)));
+  margin: 0 auto;
+  padding: 28px 0;
+  list-style: none;
+  cursor: pointer;
+  color: var(--brand-ink);
+}
+.section-accordion > summary::-webkit-details-marker { display: none; }
+.section-accordion > summary::marker { content: ""; }
+.section-accordion > summary:focus-visible {
+  outline: 3px solid var(--brand-blue);
+  outline-offset: -3px;
+  border-radius: 6px;
+}
+.section-accordion-copy { display: grid; gap: 8px; min-width: 0; }
+.section-accordion-label { color: var(--brand-blue); font-size: .875rem; font-weight: 700; letter-spacing: .06em; }
+.section-accordion-title { font-size: clamp(1.125rem, 2vw, 1.5rem); line-height: 1.6; overflow-wrap: anywhere; }
+.section-accordion-description { color: var(--brand-muted); font-size: 1rem; line-height: 1.8; font-weight: 400; }
+.section-accordion-action { display: flex; align-items: center; gap: 14px; flex-shrink: 0; font-size: .875rem; font-weight: 700; color: var(--brand-blue); }
+.section-accordion-icon { position: relative; display: block; width: 38px; height: 38px; border: 1px solid var(--brand-line); border-radius: 50%; background: var(--brand-blue-soft); }
+.section-accordion-icon::before, .section-accordion-icon::after { content: ""; position: absolute; top: 17px; left: 11px; width: 14px; height: 2px; background: currentColor; }
+.section-accordion-icon::after { transform: rotate(90deg); transition: transform .16s ease; }
+.section-accordion-close { display: none; }
+.section-accordion[open] > summary .section-accordion-open { display: none; }
+.section-accordion[open] > summary .section-accordion-close { display: inline; }
+.section-accordion[open] > summary .section-accordion-icon::after { transform: rotate(0); }
+.section-accordion[open] { background: var(--brand-blue-soft); }
+.section-accordion-panel { border-top: 1px solid var(--brand-line); }
+.section-accordion-panel > section { padding-top: 40px; padding-bottom: 48px; }
+.section-accordion-panel [id] { scroll-margin-top: 104px; }
+.section-accordion-compact { border: 1px solid var(--brand-line); border-radius: 12px; margin: 14px 0; }
+.section-accordion-compact > summary { width: auto; margin: 0; padding: 24px; }
+.section-accordion-compact .section-accordion-title { font-size: 1.125rem; }
+.section-accordion-compact > .section-accordion-panel { padding: 0 24px; background: #fff; border-radius: 0 0 12px 12px; }
+.section-accordion-compact .service-detail { border: 0; padding-top: 28px; padding-bottom: 32px; }
+.section-accordion-compact .service-detail-index,
+.section-accordion-compact .service-detail-jp { display: none; }
+.section-accordion-compact .service-detail { grid-template-columns: minmax(0, 1fr) 180px; }
+.section-accordion-compact .service-audience { grid-column: auto; }
+@media (hover: hover) {
+  .section-accordion > summary:hover .section-accordion-title { color: var(--brand-blue); }
+  .section-accordion > summary:hover .section-accordion-icon { color: #fff; background: var(--brand-blue); border-color: var(--brand-blue); }
+}
+@media (max-width: 760px) {
+  .section-accordion > summary { gap: 16px; padding-top: 22px; padding-bottom: 22px; }
+  .section-accordion-action { align-self: flex-start; padding-top: 4px; }
+  .section-accordion-open, .section-accordion[open] > summary .section-accordion-close { display: none; }
+  .section-accordion-icon { width: 32px; height: 32px; }
+  .section-accordion-icon::before, .section-accordion-icon::after { top: 14px; left: 8px; }
+  .section-accordion-compact > summary { padding: 20px 16px; }
+  .section-accordion-compact > .section-accordion-panel { padding: 0 16px; }
+  .section-accordion-compact .service-detail { grid-template-columns: minmax(0, 1fr); }
+  .section-accordion-panel > section { padding-top: 28px; padding-bottom: 32px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .section-accordion-icon::after { transition: none; }
+}

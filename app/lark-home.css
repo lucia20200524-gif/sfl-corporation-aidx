@@ -1,0 +1,58 @@
+/* Keep the Lark focus clear while exposing SFL's three businesses. */
+.sfl-masthead-support-tags { display: flex; flex-wrap: wrap; gap: 8px; list-style: none; padding: 0; margin: 24px 0 0; }
+.sfl-masthead-support-tags li { padding: 7px 14px; border: 1px solid #ffffff60; border-radius: 4px; color: #fff; background: #132c8266; font-size: .9375rem; font-weight: 600; }
+.sfl-masthead h1 { font-size: clamp(2rem, 3.4vw, 3.25rem); }
+.sfl-masthead-lead { color: var(--brand-gold-light); font-size: clamp(1.125rem, 1.7vw, 1.5rem); }
+.sfl-masthead-description { max-width: 34em; }
+.sfl-business-intro { padding-bottom: 64px; }
+.sfl-business-cards { display: grid; grid-template-columns: repeat(3,minmax(0,1fr)); align-items: start; gap: 24px; margin-top: 36px; }
+.sfl-business-card { min-width: 0; padding: 28px; border: 1px solid var(--brand-line); border-top: 4px solid var(--brand-blue); border-radius: 12px; background: var(--brand-blue-soft); scroll-margin-top: 104px; }
+.sfl-business-card:nth-child(2) { border-top-color: var(--brand-gold); background: var(--brand-gold-soft); }
+.sfl-business-card:nth-child(3) { background: #fff; }
+.sfl-business-card h3 { margin: 20px 0 12px; color: var(--brand-ink); font-size: 1.5rem; line-height: 1.5; }
+.sfl-business-card > p { margin: 0; min-height: 3.6em; font-size: 1rem; line-height: 1.8; color: var(--brand-muted); }
+.sfl-business-card details { margin-top: 20px; border-top: 1px solid var(--brand-line); }
+.sfl-business-card summary { display: flex; justify-content: space-between; align-items: center; gap: 12px; min-height: 52px; list-style: none; cursor: pointer; color: var(--brand-blue); font-size: .9375rem; font-weight: 700; }
+.sfl-business-card summary::-webkit-details-marker { display: none; }
+.sfl-business-card summary::marker { content: ""; }
+.sfl-business-card details[open] .section-accordion-open { display: none; }
+.sfl-business-card details[open] .section-accordion-close { display: inline; }
+.sfl-business-card details[open] .section-accordion-icon::after { transform: rotate(0); }
+.sfl-business-detail p, .sfl-business-detail li { font-size: 1rem; line-height: 1.9; }
+.sfl-business-detail p { margin-top: 8px; }
+.sfl-business-detail ul { padding-left: 1.2em; margin-block: 16px; }
+.sfl-business-detail li + li { margin-top: 8px; }
+.sfl-business-detail a, .sfl-support-detail > a { display: flex; justify-content: space-between; gap: 16px; padding-block: 12px; font-size: 1rem; font-weight: 700; color: var(--brand-blue); }
+.sfl-business-detail a span, .sfl-support-detail > a span { flex-shrink: 0; }
+.sfl-support-section { padding: 64px 0; background: var(--brand-blue-soft); scroll-margin-top: 104px; }
+.sfl-support-grid { display: grid; grid-template-columns: repeat(2,minmax(0,1fr)); align-items: start; gap: 20px; margin-top: 32px; }
+.sfl-support-grid > .section-accordion { margin: 0; }
+.sfl-support-grid .section-accordion-label { color: var(--brand-gold-ink); }
+.sfl-support-detail { padding: 8px 0 20px; }
+.sfl-support-detail ul { margin: 16px 0; padding-left: 1.3em; }
+.sfl-support-detail li, .sfl-support-detail p { font-size: 1rem; line-height: 1.9; }
+.sfl-support-detail li + li { margin-top: 10px; }
+.sfl-support-section #home-education-accordion { margin-top: 24px; border: 1px solid var(--brand-line); border-radius: 12px; }
+.sfl-support-section #home-education-accordion > summary { width: auto; padding-inline: 24px; }
+.sfl-support-section .trust-education > .shell { width: auto; margin-inline: 24px; }
+#home-about-accordion > .section-accordion-panel { background: #fff; }
+.sfl-consultation-end .trust-flow { padding-top: 48px; }
+.sfl-consultation-end .trust-faq { padding-top: 0; }
+@media (max-width: 900px) {
+  .sfl-business-cards { grid-template-columns: minmax(0,1fr); gap: 16px; }
+  .sfl-business-card > p { min-height: 0; }
+  .sfl-business-card h3 { margin-top: 12px; }
+  .sfl-support-grid { grid-template-columns: minmax(0,1fr); gap: 14px; }
+}
+@media (max-width: 700px) {
+  .sfl-masthead h1 { font-size: clamp(1.4rem, 6.1vw, 2.65rem); }
+  .sfl-masthead-eyebrow { font-size: .875rem; letter-spacing: 0; }
+  .sfl-masthead-support-tags { grid-row: 5; margin: 0 0 24px; gap: 6px; }
+  .sfl-masthead-support-tags li { font-size: .875rem; padding: 6px 10px; }
+  .sfl-business-intro, .sfl-support-section { padding-block: 40px; }
+  .sfl-business-card { padding: 22px; }
+  .sfl-business-card .section-accordion-open, .sfl-business-card details[open] .section-accordion-close { display: inline; }
+  .sfl-business-card details[open] .section-accordion-open { display: none; }
+  .sfl-support-section #home-education-accordion > summary { padding-inline: 16px; }
+  .sfl-support-section .trust-education > .shell { margin-inline: 16px; }
+}

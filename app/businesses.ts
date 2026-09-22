@@ -1,0 +1,40 @@
+import { SFL_PROCUREMENT_COURSE_URL } from "./courses";
+
+export const SFL_BUSINESSES = [
+  {
+    id: "business-lark",
+    number: "01",
+    name: "Lark事業",
+    english: "LARK",
+    summary: "業務改善・構築・教育・伴走支援",
+    description: "現場の業務を整理し、Larkで情報共有・顧客管理・売上管理の仕組みを構築。社員が使いこなすための教育から、導入後の運用・改善まで支援します。",
+    services: ["業務フローの整理・改善提案", "Lark Base構築・Cycle Pro", "SFL Lark導入講座・法人向け研修", "Lark FLOW ONE・サポートデスク"],
+    href: "/lark-dx",
+    action: "Larkの導入・研修を見る",
+    external: false,
+  },
+  {
+    id: "business-ai",
+    number: "02",
+    name: "AI事業",
+    english: "AI",
+    summary: "生成AI研修・活用支援・アプリ制作",
+    description: "ChatGPT・Codexなどの生成AIを、日々の仕事に活用。研修・活用支援と、Webアプリ制作・AIツールの初期設定を行います。",
+    services: ["法人向け生成AI研修", "Webアプリ制作・実務講座", "AIツールの初期設定・Lark連携"],
+    href: "/ai-dx-training",
+    action: "生成AI研修・活用支援を見る",
+    external: false,
+  },
+  {
+    id: "business-tender",
+    number: "03",
+    name: "官公庁入札事業",
+    english: "PUBLIC PROCUREMENT",
+    summary: "官公庁案件への取り組み・実務講座",
+    description: "官公庁案件の調査・入札に向けた準備を進めています。AI・Larkを活用した案件調査や情報管理にも取り組みます。官公庁入札を学ぶ実務講座の内容は、専用ページでご案内しています。",
+    services: ["官公庁案件の調査・参加判断", "入札に向けた準備・案件管理", "SFL 官公庁入札講座"],
+    href: SFL_PROCUREMENT_COURSE_URL,
+    action: "SFL 官公庁入札講座の案内を見る",
+    external: true,
+  },
+] as const;
