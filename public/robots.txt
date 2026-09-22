@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://sfl-corporation-aidx.lucia20200524.chatgpt.site/sitemap.xml
